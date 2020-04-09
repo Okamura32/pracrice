@@ -35,9 +35,10 @@ def Weather():
   wind=l
 
   l=[]
+  ans="あいうえお"
   for i in range(len(time)):
     l.append(str(time[i])+":"+"天気は"+str(weth[i])+":"+"気温は"+str(temp[i])+"℃")
     # print(time[i],":"+" 天気は",weth[i],":","気温 は",temp[i],"℃")
-  return l
+  return ans
 
   
