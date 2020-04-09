@@ -35,10 +35,11 @@ def Weather():
   wind=l
 
   l=[]
-  ans="あいうえお"
+  ans=""
   # for i in range(len(time)):
   #   l.append(str(time[i])+":"+"天気は"+str(weth[i])+":"+"気温は"+str(temp[i])+"℃")
     # print(time[i],":"+" 天気は",weth[i],":","気温 は",temp[i],"℃")
+  temp=[int(x) for x in temp]
   max_temp=max(temp)
   min_temp=min(temp)
   cloud=weth.count("曇り")
@@ -63,9 +64,8 @@ def Weather():
     else:
       today="雨"
 
-  
-  
-  
+
+
   ans="最高気温は"+str(max_temp)+"℃ "+" 最低気温は"+str(min_temp)+"℃ "+" 多分"+today
   return ans
 
