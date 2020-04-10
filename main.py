@@ -46,15 +46,16 @@ def handle_message(event):
     # line_bot_api.reply_message(
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))
-    if message.text=="天気" or "てんき":
+    if message.text=="天気" or message.text=="てんき":
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=sc.Weather())
         )
+        
     else:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage("ナニヲイッテイルノカワカリマセン")
+            TextSendMessage(text="ナニヲイッテイルノカワカリマセン")
         )
 
 
